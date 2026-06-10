@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lari Beauty - Agendamento</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/agendamento.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <h2>Lari <span>Beauty</span></h2>
+      </div>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="meus-agendamentos.html">Meus Agendamentos</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <button class="btn-header" onclick="window.location.href='servicos.html'">Agendar Agora</button>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <section class="hero-agendamento" style="background:#ead7ca; padding:60px 0;">
+    <div class="container">
+      <h1 style="font-size: 48px; margin-bottom: 10px;">Agende seu Horário</h1>
+      <div class="line" style="width:90px; height:2px; background:#c89c6c;"></div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="booking-container">
+      <div class="calendar-wrapper">
+        <div class="calendar-header">
+          <button id="prevMonth" title="Mês anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h3 id="currentMonthYear">Junho 2026</h3>
+          <button id="nextMonth" title="Próximo mês">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="calendar-grid" id="calendarGrid">
+          <div class="calendar-day-name">Dom</div>
+          <div class="calendar-day-name">Seg</div>
+          <div class="calendar-day-name">Ter</div>
+          <div class="calendar-day-name">Qua</div>
+          <div class="calendar-day-name">Qui</div>
+          <div class="calendar-day-name">Sex</div>
+          <div class="calendar-day-name">Sáb</div>
+        </div>
+
+        <div class="calendar-info">
+          <i class="fas fa-info-circle"></i>
+          <span>Selecione uma data para ver os horários disponíveis. Datas cinzas não estão disponíveis.</span>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Agendamento Rápido</h3>
+        <form id="form-agendamento-direto">
+          <div class="form-group">
+            <label for="nome-cli">Seu Nome Completo</label>
+            <input type="text" id="nome-cli" placeholder="Ex: Maria Oliveira" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="tel-cli">Seu Telefone</label>
+            <input type="tel" id="tel-cli" placeholder="(11) 99999-9999" class="form-input" required maxlength="15">
+          </div>
+
+          <div class="form-group">
+            <label for="servico-sel">Selecione o Serviço</label>
+            <select id="servico-sel" class="form-input" required>
+              <option value="">Carregando serviços...</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Data Selecionada:</label>
+            <div style="padding: 12px 15px; background: #f9f6f3; border-radius: 8px; color: #666; font-weight: 500;">
+              <span id="selected-date-display">Selecione uma data no calendário</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Horários Disponíveis:</label>
+            <div id="horarios-grid" class="horarios-grid">
+              <p style="color: #999; grid-column: 1/-1; font-size: 14px;">Selecione uma data no calendário.</p>
+            </div>
+          </div>
+
+          <input type="hidden" id="data-sel" required>
+          <input type="hidden" id="horario-final" required>
+          <input type="hidden" id="id-disp-final">
+
+          <button type="submit" class="btn-confirm">
+            <i class="fas fa-check"></i> Agendar Agora
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <h2>Lari Beauty Studio</h2>
+      </div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="agendamento.html">Agendar</a>
+      </div>
+      <p>© 2026 Lari Beauty Studio</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/agendamento.js"></script>
+</body>
+
+</html>

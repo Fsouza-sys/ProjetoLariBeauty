@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lari Beauty - Nossos Serviços</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/servicos.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <h2>Lari <span>Beauty</span></h2>
+      </div>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="meus-agendamentos.html">Meus Agendamentos</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <button class="btn-header" onclick="window.location.href='servicos.html'">Agendar Agora</button>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <section class="services-section" style="padding: 80px 0;">
+    <div class="container text-center">
+      <p class="section-subtitle" style="color:#c89c6c; margin-bottom:10px;">O que oferecemos</p>
+      <h2 class="section-title" style="margin-bottom:40px; font-size:40px;">Nossos Serviços</h2>
+
+      <div class="filter-tab-bar"
+        style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+        <button class="filter-btn active" data-category="todos">TODOS</button>
+        <button class="filter-btn" data-category="sobrancelhas">SOBRANCELHAS</button>
+        <button class="filter-btn" data-category="cilios">CÍLIOS</button>
+        <button class="filter-btn" data-category="massagem">MASSAGEM</button>
+      </div>
+
+      <div class="category-header" style="margin-bottom: 30px;">
+        <p class="category-subtitle" style="color: #666;">Sobrancelhas e Cílios</p>
+        <h3 class="category-title" id="category-title-text" style="font-size: 24px;">Procedimentos faciais</h3>
+      </div>
+
+      <div class="services-grid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+        <div class="service-card" data-item="sobrancelhas"
+          style="background: white; border: 2px solid #e4c7b2; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="card-body">
+            <div class="service-icon" style="color: #c89c6c; font-size: 24px; margin-bottom: 15px;">✦</div>
+            <h4 style="font-size: 20px; margin-bottom: 15px;">Design de Sobrancelhas</h4>
+            <p class="service-desc" style="color: #666; margin-bottom: 20px;">
+              Formato personalizado de acordo com o seu visagismo facial.
+              Resultado natural e duradouro.
+            </p>
+          </div>
+          <div class="service-footer"
+            style="border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="price-info" style="display: flex; flex-direction: column;">
+              <span class="time" style="font-size: 14px; color: #999;">1h 00min</span>
+              <span class="price" style="color: #c89c6c; font-weight: bold; font-size: 18px;">R$ 35,00</span>
+            </div>
+            <button class="btn-card-schedule" onclick="window.location.href='agendamento.html'"
+              style="background: #c89c6c; color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer;">AGENDAR</button>
+          </div>
+        </div>
+
+        <div class="service-card highlighted" data-item="cilios"
+          style="background: #4a2415; color: white; border: 2px solid #4a2415; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="card-body">
+            <div class="service-icon" style="color: #c89c6c; font-size: 24px; margin-bottom: 15px;">✦</div>
+            <h4 style="font-size: 20px; margin-bottom: 15px;">Lash Design</h4>
+            <p class="service-desc" style="color: #d6b49c; margin-bottom: 20px;">
+              Técnicas internacionais para cílios. Fios personalizados para
+              cada tipo de olhar.
+            </p>
+          </div>
+          <div class="service-footer"
+            style="border-top: 1px solid #5a3425; padding-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="price-info" style="display: flex; flex-direction: column;">
+              <span class="time" style="font-size: 14px; color: #d6b49c;">Consultar</span>
+              <span class="price" style="color: #c89c6c; font-weight: bold; font-size: 18px;">Consultar</span>
+            </div>
+            <button class="btn-card-schedule" onclick="window.location.href='agendamento.html'"
+              style="background: #c89c6c; color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer;">AGENDAR</button>
+          </div>
+        </div>
+
+        <div class="service-card" data-item="massagem"
+          style="background: white; border: 2px solid #e4c7b2; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="card-body">
+            <div class="service-icon" style="color: #c89c6c; font-size: 24px; margin-bottom: 15px;">✦</div>
+            <h4 style="font-size: 20px; margin-bottom: 15px;">Massagem Relaxante</h4>
+            <p class="service-desc" style="color: #666; margin-bottom: 20px;">
+              Técnica especializada para alívio de tensões e busca do
+              bem-estar completo.
+            </p>
+          </div>
+          <div class="service-footer"
+            style="border-top: 1px solid #eee; padding-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="price-info" style="display: flex; flex-direction: column;">
+              <span class="time" style="font-size: 14px; color: #999;">Consultar</span>
+              <span class="price" style="color: #c89c6c; font-weight: bold; font-size: 18px;">Consultar</span>
+            </div>
+            <button class="btn-card-schedule" onclick="window.location.href='agendamento.html'"
+              style="background: #c89c6c; color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer;">AGENDAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans-section" style="background: #ead7ca; padding: 80px 0;">
+    <div class="container">
+      <h3 class="plans-title" style="font-size: 32px; margin-bottom: 40px; text-align: center;">
+        Conheça nossos <span class="highlight-text" style="color: #c89c6c; font-style: italic;">Planos mensais</span>
+      </h3>
+
+      <div class="plans-grid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+        <div class="plan-card dark-plan"
+          style="background: #4a2415; color: white; border-radius: 20px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="plan-info">
+            <h4 style="font-size: 22px; margin-bottom: 20px;">Plano Beauty - 2x Design Sobrancelhas</h4>
+            <p style="color: #d6b49c; margin-bottom: 25px;">
+              Receba duas sessões de design de sobrancelhas com o melhor
+              custo-benefício para sua rotina de cuidados.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+              <span class="plan-time" style="color: #c89c6c;">2x 60min</span>
+              <span class="plan-price" style="font-size: 24px; font-weight: bold; color: #c89c6c;">R$ 70,00</span>
+            </div>
+          </div>
+          <button class="btn-plan-schedule" onclick="window.location.href='agendamento.html'"
+            style="background: #c89c6c; color: white; border: none; padding: 12px; border-radius: 25px; margin-top: 30px; cursor: pointer; font-weight: bold;">AGENDAR</button>
+        </div>
+
+        <div class="plan-card light-plan"
+          style="background: white; color: #3d2417; border: 2px solid #c89c6c; border-radius: 20px; padding: 40px; position: relative; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="plan-info">
+            <span class="badge-recommended"
+              style="position: absolute; top: -15px; right: 30px; background: #c89c6c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">RECOMENDADO</span>
+            <h4 style="font-size: 22px; margin-bottom: 20px;">Plano Beauty - 2x Design com Henna</h4>
+            <p style="color: #666; margin-bottom: 25px;">
+              Receba duas sessões de design com henna. Garanta o
+              custo-benefício para sua rotina de cuidados.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+              <span class="plan-time" style="color: #c89c6c;">2x 60min</span>
+              <span class="plan-price" style="font-size: 24px; font-weight: bold; color: #c89c6c;">R$ 100,00</span>
+            </div>
+          </div>
+          <button class="btn-plan-schedule" onclick="window.location.href='agendamento.html'"
+            style="background: #c89c6c; color: white; border: none; padding: 12px; border-radius: 25px; margin-top: 30px; cursor: pointer; font-weight: bold;">AGENDAR</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <h2>Lari Beauty Studio</h2>
+      </div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Agendar</a>
+      </div>
+      <p>© 2026 Lari Beauty Studio</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/servicos.js"></script>
+</body>
+
+</html>

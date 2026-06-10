@@ -1,0 +1,27 @@
+
+.filter-btn {
+    background: white;
+    border: 1px solid #c89c6c;
+    color: #c89c6c;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #c89c6c;
+    color: white;
+}
+
+.service-card.highlighted .btn-card-schedule {
+    background: white !important;
+    color: #4a2415 !important;
+}
+
+@media (max-width: 600px) {
+    .services-grid, .plans-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

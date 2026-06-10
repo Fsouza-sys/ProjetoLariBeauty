@@ -1,0 +1,204 @@
+
+.hero{
+  background:#ead7ca;
+  padding:80px 0;
+}
+
+.hero-container{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.mini-title{
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.hero h1{
+  font-size:70px;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:#c89c6c;
+  font-style:italic;
+}
+
+.line{
+  width:90px;
+  height:2px;
+  background:#c89c6c;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  background:#c89c6c;
+  border:none;
+  color:white;
+  padding:14px 25px;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.btn-outline{
+  border:1px solid #c89c6c;
+  background:transparent;
+  padding:14px 25px;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.hero-image{
+  flex:1;
+}
+
+.hero-image img{
+  width:100%;
+  border-radius:20px;
+  object-fit:cover;
+}
+
+.services{
+  padding:80px 0;
+}
+
+.section-subtitle{
+  color:#c89c6c;
+  margin-bottom:10px;
+}
+
+.section-title{
+  margin-bottom:40px;
+  font-size:40px;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.card{
+  flex:1;
+  min-width:280px;
+  background:white;
+  border:2px solid #e4c7b2;
+  border-radius:20px;
+  padding:25px;
+}
+
+.circle{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:#e4c7b2;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+.card p{
+  margin-bottom:10px;
+  color:#666;
+}
+
+.card span{
+  color:#c89c6c;
+  font-weight:bold;
+}
+
+.about{
+  background:#4a2415;
+  color:white;
+  padding:80px 0;
+}
+
+.about-container{
+  display:flex;
+  justify-content:space-between;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text p{
+  color:#d6b49c;
+  margin-bottom:10px;
+}
+
+.about-text h2{
+  margin-bottom:20px;
+  font-size:42px;
+}
+
+.about-numbers{
+  display:flex;
+  gap:60px;
+  align-items:center;
+}
+
+.about-numbers h2{
+  font-size:45px;
+}
+
+.cta{
+  background:#c89c6c;
+  padding:60px 0;
+  color:white;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+/* Estilos responsivos específicos da index */
+@media(max-width:900px){
+  .hero h1{
+    font-size:45px;
+  }
+
+  .about-numbers{
+    width:100%;
+    justify-content:space-between;
+  }
+}
+
+@media(max-width:600px){
+  .hero{
+    padding:50px 0;
+  }
+
+  .hero h1{
+    font-size:35px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .section-title{
+    font-size:30px;
+  }
+}

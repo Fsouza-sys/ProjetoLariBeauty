@@ -1,0 +1,1 @@
+// O controle do menu mobile foi movido para common.js
