@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lari Beauty - Meus Agendamentos</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    .search-section {
+      background: white;
+      border: 2px solid #e4c7b2;
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 40px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .search-section h3 {
+      color: #4a2415;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .search-section p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+    }
+
+    .form-input {
+      flex: 1;
+      min-width: 250px;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #c89c6c;
+      box-shadow: 0 0 0 3px rgba(200, 156, 108, 0.1);
+      background: #fafafa;
+    }
+
+    .form-input::placeholder {
+      color: #999;
+    }
+
+    .btn-search {
+      background: #c89c6c;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-search:hover {
+      background: #b38b5f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(200, 156, 108, 0.2);
+    }
+
+    .btn-search:active {
+      transform: translateY(0);
+    }
+
+    .results-container {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .appointment-card {
+      background: white;
+      border: 1px solid #e4c7b2;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .appointment-card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .appointment-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background: #c89c6c;
+    }
+
+    .appointment-card h4 {
+      color: #4a2415;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .appointment-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .appointment-info i {
+      color: #c89c6c;
+      width: 20px;
+      text-align: center;
+    }
+
+    .no-results {
+      grid-column: 1/-1;
+      padding: 40px;
+      color: #999;
+      font-style: italic;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .search-section {
+        padding: 25px;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .form-input {
+        min-width: 100%;
+      }
+
+      .btn-search {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .results-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <h2>Lari <span>Beauty</span></h2>
+      </div>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="meus-agendamentos.html">Meus Agendamentos</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <button class="btn-header" onclick="window.location.href='servicos.html'">Agendar Agora</button>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+  </header>
+
+
+  <section class="hero-meus-agendamentos" style="background:#ead7ca; padding:60px 0;">
+    <div class="container">
+      <h1 style="font-size: 48px; margin-bottom: 10px;">Meus Agendamentos</h1>
+      <p style="color: #4a2415; font-size: 18px;">Consulte seus horários marcados informando seu nome.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="search-section">
+      <h3>Buscar Agendamentos</h3>
+      <p>Digite seu nome para visualizar todos os seus agendamentos</p>
+      <div class="search-box">
+        <input type="text" id="search-nome" placeholder="Ex: Maria Oliveira" class="form-input">
+        <button id="btn-buscar" class="btn-search">
+          <i class="fas fa-search"></i> BUSCAR
+        </button>
+      </div>
+    </div>
+
+    <div id="results" class="results-container">
+      <div class="no-results">
+        <i class="fas fa-search" style="font-size: 32px; margin-bottom: 10px; display: block; color: #ddd;"></i>
+        Digite seu nome acima para ver seus agendamentos.
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <h2>Lari Beauty Studio</h2>
+      </div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="agendamento.html">Agendar</a>
+      </div>
+      <p>© 2026 Lari Beauty Studio</p>
+    </div>
+  </footer>
+
+
+  <script src="js/common.js"></script>
+  <script>
+
+    const API_URL = "http://localhost:3001/api";
+    const nomeInput = document.getElementById("search-nome");
+    const btnBuscar = document.getElementById("btn-buscar");
+    const resultsContainer = document.getElementById("results");
+
+    async function buscarAgendamentos(nome) {
+      const nomeLimpo = nome.trim();
+
+      if (nomeLimpo.length < 2) {
+        alert("Por favor, digite pelo menos 2 caracteres do seu nome.");
+        return;
+      }
+
+      resultsContainer.innerHTML = "<div class='no-results'><i class='fas fa-spinner fa-spin' style='font-size: 24px; margin-bottom: 10px; display: block;'></i>Buscando seus agendamentos...</div>";
+
+      try {
+        const res = await fetch(`${API_URL}/agendamentos/cliente/nome/${encodeURIComponent(nomeLimpo)}`);
+        const agendamentos = await res.json();
+
+        resultsContainer.innerHTML = "";
+
+        if (agendamentos.length === 0) {
+          resultsContainer.innerHTML = "<div class='no-results'><i class='fas fa-inbox' style='font-size: 32px; margin-bottom: 10px; display: block; color: #ddd;'></i>Nenhum agendamento encontrado para este nome.</div>";
+          return;
+        }
+
+        agendamentos.forEach(a => {
+          const dataFormatada = new Date(a.data_agend).toLocaleDateString('pt-BR', { timeZone: 'UTC' });
+          const card = document.createElement("div");
+          card.className = "appointment-card";
+          card.innerHTML = `
+                    <h4>${a.servico}</h4>
+                    <div class="appointment-info">
+                        <i class="fas fa-user"></i>
+                        <span><strong>${a.nomecli}</strong></span>
+                    </div>
+                    <div class="appointment-info">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>${dataFormatada}</span>
+                    </div>
+                    <div class="appointment-info">
+                        <i class="fas fa-clock"></i>
+                        <span>${a.horario_agend.substring(0, 5)}</span>
+                    </div>
+                    <div class="appointment-info">
+                        <i class="fas fa-phone"></i>
+                        <span>${a.telcel}</span>
+                    </div>
+                `;
+          resultsContainer.appendChild(card);
+        });
+      } catch (err) {
+        resultsContainer.innerHTML = "<div class='no-results' style='color:#d9534f;'><i class='fas fa-exclamation-circle' style='font-size: 32px; margin-bottom: 10px; display: block;'></i>Erro ao carregar dados. Tente novamente mais tarde.</div>";
+      }
+    }
+
+    // Clique no botão buscar
+    btnBuscar.onclick = () => buscarAgendamentos(nomeInput.value);
+
+    //Pressionar Enter no input
+    nomeInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        buscarAgendamentos(nomeInput.value);
+      }
+    });
+  </script>
+</body>
+
+</html>

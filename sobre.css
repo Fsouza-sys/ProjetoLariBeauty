@@ -1,0 +1,23 @@
+
+.hero-sobre h1 {
+    color: #3d2417;
+}
+
+.sobre-content p {
+    color: #3d2417;
+}
+
+@media (max-width: 900px) {
+    .about-numbers {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-numbers {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+}
